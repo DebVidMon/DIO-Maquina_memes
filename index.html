@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="icon" href="./assets/img/fine.png">
     <title>Máquina de Memes da Dé</title>
 </head>
+
 <body>
+    <div class="container">
+        <h1>Faça seu próprio meme :P</h1>
 
-    <h1>Faça seu próprio meme :P</h1>
+        <div class="photo-picker">
+            <select id="meme-list">
+                <option value="imagem1">Escolha sua imagem</option>
+            </select>
+            <input type="file" id="image-input" accept="image/jpeg, image/jpg, image/png, image/gif">
+        </div>
+        <div class="meme">
+            <div class="texto">
+                <input type="text" placeholder="Digite seu texto aqui">
+            </div>
+            <div class="image">
+                <img src="./assets/img/meme_this_is_fine_dog.png" alt="this is fine">
+            </div>
+            <div class="texto">
+                <input type="text" placeholder="Digite seu texto aqui">
+            </div>
+        </div>
+        <button id="download">Download</button>
+    </div>
 
-    <p>🚧 Em construção 🚧</p>
+    <!-- <p>🚧 Em construção 🚧</p> -->
 
     <script src="./assets/script.js"></script>
 </body>
+
 </html>

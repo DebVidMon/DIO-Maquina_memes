@@ -1,4 +1,100 @@
 
 *{
     margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 1rem ;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.container{
+    margin: 0 auto;
+    background-color: #ccc;
+    width:fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.meme{
+    border: .1rem solid #000000cc;
+    padding: .2rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    padding: 1rem;
+}
+
+.photo-picker{
+    font-size: .8rem;
+    display: flex;
+}
+
+#meme-list{
+    width: 48%;
+    border-radius: .5rem;
+}
+
+#image-input{
+    margin: 0 0 0 1rem;
+    width: 48%;
+    font-size: .8rem;
+    text-decoration: none;
+}
+
+input{
+    height: 2rem;
+    border-radius: .3rem; 
+    width: 100%; 
+    background-color: #00000000;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.image{
+    margin: 1rem;
+}
+img{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 50vh; 
+}
+
+button{
+    width: 100%;
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+    padding: .2rem;
+    border: .1rem solid #000;
+    border-radius: .4rem;
+    background-color: #000;
+    color: #fff;
+}
+button:hover{
+    background-color: #111;
+    box-shadow: 0 0 1rem #000;
+}
+
+@media(max-width:767px){
+ body{
+    margin: .1rem;
+ }
+
+ h1{
+    font-size: 1.1rem;
+    text-align: center;
+ }
 }
