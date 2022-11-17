@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body{
     height: 100vh;
     width: 100%;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
 h1{
@@ -41,19 +41,19 @@ h1{
 .photo-picker{
     font-size: .8rem;
     display: flex;
+    width: 100%;
+    margin: 1rem auto;
 }
 
-#meme-list{
-    width: 48%;
+ #meme-list{
     border-radius: .5rem;
 }
 
 #image-input{
     margin: 0 0 0 1rem;
-    width: 48%;
     font-size: .8rem;
     text-decoration: none;
-}
+} 
 
 input{
     height: 2rem;
@@ -61,8 +61,9 @@ input{
     width: 100%; 
     background-color: #00000000;
     text-align: center;
-    font-weight: 400;
     font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 .image{
     margin: 1rem;
