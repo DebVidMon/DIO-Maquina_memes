@@ -1,13 +1,16 @@
 function enableUpload(){
     const imageInput = document.querySelector("#image-input")
-
+    console.log("preparou")
     imageInput.addEventListener("change", function(){
         const reader = new FileReader()
+        console.log("engatilhou")
         reader.addEventListener("load",()=>{
             const uploadImage = reader.result
-
-            changePicture(uploadImage)
+            console.log(uploadImage)
+            changePicture(uploadImage,"")
+            
         })
+        reader.readAsDataURL(this.files[0])
     })
 }
 
@@ -78,7 +81,6 @@ async function main(){
     const memesImageList = await mapImageList()
     enableUpload()
     await createGallery(memesImageList)
-   // await changePicture(memesImageList[1].path)
 
 }
 
