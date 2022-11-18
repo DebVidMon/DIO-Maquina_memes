@@ -15,21 +15,21 @@
         <h1>Faça seu próprio meme :P</h1>
 
         <div class="photo-picker">
-            <select id="meme-list">
-                <option value="imagem1">Escolha sua imagem</option>
+            <select id="memeList" onchange="changePicture(this.value, this.path)">
+                <option value="1">Escolha sua imagem</option>
             </select>
             <input type="file" id="image-input" accept="image/jpeg, image/jpg, image/png, image/gif">
         </div>
-        <div class="meme">
+        <div id="meme">
             <div class="texto">
-                <input type="text" placeholder="Digite seu texto aqui">
+                <input class="inputText" type="text" placeholder="Digite seu texto aqui">
             </div>
-            <div class="image">
-                <img src="./assets/img/meme_this_is_fine_dog.png" alt="this is fine">
+            <div class="displayImage">
+                <img id="displayImage" src="./assets/img/meme_this_is_fine_dog.png" alt="this is fine">
             </div>
-            <!-- <div id="display-image"></div> -->
+
             <div class="texto">
-                <input type="text" placeholder="Digite seu texto aqui">
+                <input class="inputText" type="text" placeholder="Digite seu texto aqui">
             </div>
         </div>
         <button id="download">Download</button>
@@ -37,7 +37,28 @@
 
     <!-- <p>🚧 Em construção 🚧</p> -->
 
-    <script src="./assets/script.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/html2Canvas.js"></script>
+    <script>
+        document.getElementById("download").onclick = () => {
+            console.log("clicou")
+            const screenshotPrint = document.querySelector("#meme")
+            
+            html2canvas(screenshotPrint).then((canvas) => {
+                console.log("iniciou html2canvas")
+                const base64Image = canvas.toDataURL("image/png")
+                console.log(base64Image)
+                let anchor = document.createElement("a")
+                anchor.setAttribute("href", base64Image)
+                anchor.setAttribute("download", "my-meme.png")
+                anchor.click()
+                console.log("clicou link")
+                anchor.remove()
+                console.log("destruiu link")
+            })
+
+        }
+    </script>
 </body>
 
 </html>

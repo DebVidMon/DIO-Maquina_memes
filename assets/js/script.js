@@ -14,9 +14,9 @@ function enableUpload(){
 async function mapImageList(){
     const memes =[
         {"name": "It's Fine",
-        "path" : "img/meme_this_is_fine_dog.png"},
+        "path" : "./assets/img/meme_this_is_fine_dog.png"},
         {"name": "icon",
-        "path": "img/fine.png"},
+        "path": "./assets/img/fine.png"},
     ]
     return memes
 }
@@ -32,12 +32,12 @@ async function createGallery(imageList){
     });
 }
 
-async function changePicture(photo){
+async function changePicture(path, name){
     let displayImage = document.querySelector("#displayImage")
-    displayImage.src= photo.path
-    displayImage.alt= photo.name
-}
+    displayImage.src= path
+    displayImage.alt= name
 
+}
 async function main(){
     const memesImageList = await mapImageList()
     enableUpload()
