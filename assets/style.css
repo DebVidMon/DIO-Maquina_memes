@@ -55,7 +55,7 @@ h1{
     text-decoration: none;
 } 
 
-input{
+.inputText{
     height: 2rem;
     border-radius: .3rem; 
     width: 100%; 
